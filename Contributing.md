@@ -8,11 +8,12 @@ At a high-level, this is how the contribution workflow looks like:
 
 1. Create a fork of CoreCLR repository
 2. Create a branch off the master in your fork. Name it something that that makes sense, such as issue-123 or githubhandle-issue. This makes it easy for everyone to figure out what the branch is used for. It also makes it easier to isolate your change from incoming changes from the origin.
-3. Make sure that both debug and release builds are clean.
-4. Run the tests and make sure they are all passing.
+3. For all the [architectures and build configurations on the supported OS platforms](https://github.com/dotnet/coreclr/wiki/Developer-Guide):
+	1. Make sure that the builds are clean.
+	2. Make sure that the tests are are passing.
 5. Commit your changes and push your changes to your branch on GitHub
-6. Create a pull request against the dotnet/coreclr repository's master branch
-	
+6. Create a pull request against the **dotnet/coreclr** repository's **master** branch
+		
 The pull-request (PR) will go through the usual review process. Once PR request comes in, our CI (continuous integration) system will run tests (including the ones you are expected to run) against it. If the builds are clean, tests are passing and at-least 2 developers (could be more, depending on the context and nature of the change) from the .NET Framework team have signed off on the change, the PR will be approved and merged.
 
 If the CI build fails for any reason, the PR issue will be updated with a link that can be used to determine the cause of the failure.
