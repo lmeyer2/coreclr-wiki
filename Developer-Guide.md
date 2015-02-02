@@ -1,6 +1,12 @@
 # Building the repository #
 
-CoreCLR repo can be built from a regular, non-admin command prompt. Currently, the repo supports building CoreCLR.dll (and its various native binaries), mscorlib.dll and the accompanying tests for Windows x64 platform. We have work in progress to bring more tests online and support more platforms in the near future.
+CoreCLR repo can be built from a regular, non-admin command prompt. Currently, the repo supports building CoreCLR.dll (and its various native binaries), mscorlib.dll and the accompanying tests for the following platforms and build configurations:
+
+**Windows**
+
+- X64 - Debug and Release
+
+We have work in progress to bring more tests online and support more platforms in the near future.
 
 ## Prerequisites ##
 
