@@ -19,6 +19,8 @@ The pull-request (PR) will go through the usual review process. Once PR request 
 
 If the CI build fails for any reason, the PR issue will be updated with a link that can be used to determine the cause of the failure.
 
+_Note:_ As we are working to bring up the Linux port of the repo, our CI system will also gate the PRs against Linux builds to ensure that they are not broken. Usually, a PR will not break the Linux build but this is to identify the one-off change that may. This will also enable us to bring the Linux developers the same engineering experience, as on other platforms, sooner.
+
 **Understanding the TFS-Git Mirror**
 
 As mentioned above, CoreCLR and Desktop CLR share the same source code. We want to ensure that innovations made in one can flow successfully to the other. It also means that they should flow out to our repo and likewise, any changes committed to the repo should flow back to our internal branches. To facilitate this, we have a TFS-Git bidirectional mirroring infrastructure that will propagate any changes from our Desktop CLR branches to the Git repo and vice-versa.
