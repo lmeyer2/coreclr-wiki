@@ -33,7 +33,7 @@ The repository is configured to allow Git to make the right decision about handl
 This will do a clean x64/Debug build of CoreCLR, its native components, Mscorlib and the tests. 
 
 
-- Binaries will be dropped in `<repo_root>\Binaries\Product\<arch>\<flavor>` folder. 
+- Product Binaries will be dropped in `<repo_root>\Binaries\Product\<arch>\<flavor>` folder. 
 - A Nuget package, Microsoft.Dotnet.CoreCLR, will also be created under `<repo_root>\Binaries\Product\<arch>\<flavor>\.nuget` folder. 
 - Test binaries will be dropped under `<repo_root>\Binaries\Tests\<arch>\<flavor>` folder
 
