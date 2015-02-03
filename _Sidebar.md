@@ -1,4 +1,5 @@
 * [[Home]]
 * [[Developer Guide]]
  * [[Contributing]]
+ * [[Garbage Collector Contributions]]
  * [[Performance]]
