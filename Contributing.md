@@ -15,7 +15,7 @@ At a high-level, this is how the contribution workflow looks like:
 5. Commit your changes and push your changes to your branch on GitHub
 6. Create a pull request against the **dotnet/coreclr** repository's **master** branch
 		
-The pull-request (PR) will go through the usual review process. Once PR request comes in, our CI (continuous integration) system will run tests (including the ones you are expected to run) against it. If the builds are clean, tests are passing and **at-least 2 developers** (could be more, depending on the context and nature of the change) from the .NET Framework team have signed off on the change, the PR will be approved and merged.
+The pull-request (PR) will go through the usual review process. Once PR request comes in, our CI (continuous integration) system will run tests (including the ones you are expected to run) against it. If the builds are clean, tests are passing and **at-least 2 developers** (could be more, depending on the context and nature of the change) from the .NET Runtime team have signed off on the change, the PR will be approved and merged.
 
 If the CI build fails for any reason, the PR issue will be updated with a link that can be used to determine the cause of the failure.
 
