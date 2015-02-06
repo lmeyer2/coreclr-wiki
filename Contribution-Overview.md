@@ -52,9 +52,3 @@ CoreCLR is a very self-contained managed runtime that helps address these goals,
 This is a work in progress. For now, we will review the changes closely to ensure that any potential for regressing the Desktop CLR is minimized. For you, the developer, it means that your change should be under a `#ifdef FEATURE_CORECLR`. 
 
 Long term, we are working on augmenting our CI system to perform Desktop CLR validation against the PR as well, in addition to PR reviews.
-
-## General .NET Contribution Guidelines ##
-
-For coding guidelines for this repository, please do give priority to the current style of the project or file you're changing even if it diverges from the guidelines. 
-
-For general .NET Contribution guidelines, please refer to them [here](https://github.com/dotnet/corefx/wiki/Contributing). 
