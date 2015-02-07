@@ -121,7 +121,7 @@ Make a ```packages.config``` file with the following text:
 Then grab NuGet (if you don't have it already)
 
 ```
-ellismg@linux:~/coreclr-demo/packages$ curl -O https://api.nuget.org/downloads/nuget.exe
+ellismg@linux:~/coreclr-demo/packages$ curl -L -O https://nuget.org/nuget.exe
 ```
 
 And restore your packages.config file:
