@@ -6,16 +6,11 @@ Before starting, you need to set up your development machine.  We use Ubuntu 14.
 
 There have been reports of issues when using other distros or versions of Ubuntu (e.g. [Issue 95](https://github.com/dotnet/coreclr/issues/95)) so if you're on another distribution, consider using docker's ```ubuntu:14.04``` image.
 
-We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5 nasm```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
+We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
 
-```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 nasm```  
+```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5```  
 
-This gives us the 3.5 version of the llvm toolchain and the following versions for cmake and nasm:
-
-```
-cmake: 2.8.12.2
-nasm: 2.10.09
-```
+This gives us the 3.5 version of the llvm toolchain and version 2.8.12.2 of cmake.
 
 This guide assumes that you've cloned the coreclr repository into ```~/git/coreclr``` on your Linux machine and the corefx and coreclr repositories into ```D:\git\corefx``` and ```D:\git\coreclr``` on Windows. If your setup is different, you'll need to pay careful attention to the commands you run. In this guide, I'll always show what directory I'm in on both the Linux and Windows machine.
 
