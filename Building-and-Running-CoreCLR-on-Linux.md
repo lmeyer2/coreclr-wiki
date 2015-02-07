@@ -4,7 +4,7 @@ This guide will walk you through building CoreCLR on Linux and running Hello Wor
 
 Before starting, you need to set up your development machine.  We use Ubuntu 14.04 LTS as our primary environment currently, so these instructions are written assuming you are using that Distro.  Pull Requests are welcome to address other environments as long as they don't break the ability to use Ubuntu 14.04 LTS.
 
-There have been reports of issues when using other distros or versions of Ubuntu (e.g. [Issue 95](https://github.com/dotnet/coreclr/issues/95)) so if you're on another distrobution, consider using docker's ```ubuntu:14.04``` image.
+There have been reports of issues when using other distros or versions of Ubuntu (e.g. [Issue 95](https://github.com/dotnet/coreclr/issues/95)) so if you're on another distribution, consider using docker's ```ubuntu:14.04``` image.
 
 We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5 nasm```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
 
