@@ -6,9 +6,9 @@ Before starting, you need to set up your development machine.  We use Ubuntu 14.
 
 There have been reports of issues when using other distros or versions of Ubuntu (e.g. [Issue 95](https://github.com/dotnet/coreclr/issues/95)) so if you're on another distribution, consider using docker's ```ubuntu:14.04``` image.
 
-We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
+We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5 libunwind8 libunwind8-dev```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
 
-```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5```  
+```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 libunwind8 libunwind8-dev```  
 
 This gives us the 3.5 version of the llvm toolchain and version 2.8.12.2 of cmake.
 
