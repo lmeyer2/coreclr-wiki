@@ -4,5 +4,6 @@
  * [[Contribution Guidelines]]
  * [[Garbage Collector Contributions]]
  * [[Performance]]
+ * [[Testing across repos]]
 * [[Samples]]
  * [[Building and Running CoreCLR on Linux]]
