@@ -36,10 +36,9 @@ ellismg@linux:~/git/coreclr$ cp binaries/Product/amd64/debug/libcoreclr.so ~/cor
 
 Today, we don't support building the managed components of the runtime on Linux yet, so you'll need to have a Windows machine with clones of both the CoreCLR and CoreFX projects.
 
-Furthmore, our build system does not segment output based on the target platform yet, so in order to build the managed components for Linux, you'll first want to remove any versions of the assemblies you have built before.
+Furthmore, the coreclr project's build system does not segment output based on the target platform yet, so in order to build the managed components for Linux, you'll first want to remove any versions of the assemblies you have built before.
 
 ```
-D:\git\corefx> rmdir /q /s bin
 D:\git\coreclr> rmdir /q /s binaries
 ```
 
@@ -57,18 +56,18 @@ For the rest of the framework, we need to pass some special parameters to build.
 D:\git\corefx> build.cmd /p:OS=Unix /p:SkipTests=true
 ```
 
-It's also possible to add ```/t:rebuild``` to the build.cmd to force it to delete the previously built assemblies.  This is an option if you want to switch between building the framework for Windows and Linux and don't want to delete the entire binaries directory between builds.
+It's also possible to add ```/t:rebuild``` to the build.cmd to force it to delete the previously built assemblies.
 
-For the purposes of Hello World, we need to copy over just ```bin\Debug\System.Console\System.Console.dll``` into the runtime folder on Linux. (e.g ```~/coreclr-demo/runtime```).
+For the purposes of Hello World, we need to copy over both ```bin\Unix.AnyCPU.Debug\System.Console\System.Console.dll``` and ```bin\Unix.AnyCPU.Debug\System.Console\System.Diagnostics.Debug.dll```  into the runtime folder on Linux. (e.g ```~/coreclr-demo/runtime```).
 
 After you've done these steps, the runtime directory on Linux should look like this:
 
 ```
 matell@linux:~$ ls ~/coreclr-demo/runtime/
-corerun  libcoreclr.so  mscorlib.dll  System.Console.dll
+corerun  libcoreclr.so  mscorlib.dll  System.Console.dll  System.Diagnostics.Debug.dll
 ```
 
-```System.Console.dll``` depends on some assemblies, which are presently just facades that point to mscorlib.  We can pull these dependencies down via NuGet running on Mono.
+The rest of the assemblies we need to run are presently just facades that point to mscorlib.  We can pull these dependencies down via NuGet running on Mono.
 
 If you don't already have Mono installed on your system, you can follow [installation instructions](http://www.mono-project.com/docs/getting-started/install/linux/)
 
@@ -125,7 +124,7 @@ And restore your packages.config file:
 ellismg@linux:~/coreclr-demo/packages$ mono nuget.exe restore -Source https://www.myget.org/F/dotnet-corefx/ -PackagesDirectory .
 ```
 
-Finally, we need to copy over the assemblies to the runtime folder.  We don't want to copy over System.Console.dll however, since the version from NuGet is the Windows version.  The easiest way to do this is with a little find magic:
+Finally, we need to copy over the assemblies to the runtime folder.  We don't want to copy over System.Console.dll or System.Diagnostics.Debug however, since the version from NuGet is the Windows version.  The easiest way to do this is with a little find magic:
 
 ```
 ellismg@linux:~/coreclr-demo/packages$ find . -wholename '*/aspnetcore50/*.dll' -exec cp -n {} ~/coreclr-demo/runtime \;
