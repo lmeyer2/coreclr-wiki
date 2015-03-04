@@ -35,12 +35,6 @@ ellismg@linux:~/git/coreclr$ cp binaries/Product/linux.x64.debug/libcoreclr.so ~
 
 Today, we don't support building the managed components of the runtime on Linux yet, so you'll need to have a Windows machine with clones of both the CoreCLR and CoreFX projects.
 
-Furthmore, the coreclr project's build system does not segment output based on the target platform yet, so in order to build the managed components for Linux, you'll first want to remove any versions of the assemblies you have built before.
-
-```
-D:\git\coreclr> rmdir /q /s binaries
-```
-
 We build ```mscorlib.dll``` out of the coreclr repository and the rest of the framework that we'll need out of the corefx repository.  For mscorlib (from a regular command prompt window) run:
 
 ```
