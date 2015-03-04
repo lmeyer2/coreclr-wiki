@@ -47,7 +47,7 @@ We build ```mscorlib.dll``` out of the coreclr repository and the rest of the fr
 D:\git\coreclr> build.cmd unixmscorlib
 ```
 
-The output is placed in ```binaries\intermediates\amd64\Debug\mscorlib.dll```.  You'll want to copy this to the runtime folder on your Linux machine. (e.g. ```~/coreclr-demo/runtime```)
+The output is placed in ```binaries\intermediates\Unix.x64.Debug\mscorlib.dll```.  You'll want to copy this to the runtime folder on your Linux machine. (e.g. ```~/coreclr-demo/runtime```)
 
 For the rest of the framework, we need to pass some special parameters to build.cmd when building out of the CoreFX repository.  Note that this repository must be built from a [Developer Command Prompt for VS2013](https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx):
 
