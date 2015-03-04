@@ -20,18 +20,17 @@ To build the runtime on Linux, run build.sh from the root of the coreclr reposit
 ellismg@linux:~/git/coreclr$ ./build.sh
 ```
 
-After the build is completed, there should be three files placed in ```binaries/Product/amd64/debug```:
+After the build is completed, there should some files placed in ```binaries/Product/linux.x64.debug```.  The ones we are interested in are:
 
 * ```corerun```: The command line host.  This program loads and starts the CoreCLR runtime and passes the managed program you want to run to it.
 * ```libcoreclr.so```: The CoreCLR runtime itself.
-* ```libmscordaccore.so```: The DAC, a component that helps interface debuggers to CoreCLR.  This is unused for now but will eventually be used by our SOS support on Linux.
 
 In order to keep everything tidy, let's create a new directory for the runtime and copy the runtime and corerun into it.
 
 ```
 ellismg@linux:~/git/coreclr$ mkdir -p ~/coreclr-demo/runtime
-ellismg@linux:~/git/coreclr$ cp binaries/Product/amd64/debug/corerun ~/coreclr-demo/runtime
-ellismg@linux:~/git/coreclr$ cp binaries/Product/amd64/debug/libcoreclr.so ~/coreclr-demo/runtime
+ellismg@linux:~/git/coreclr$ cp binaries/Product/linux.x64.debug/corerun ~/coreclr-demo/runtime
+ellismg@linux:~/git/coreclr$ cp binaries/Product/linux.x64.debug/libcoreclr.so ~/coreclr-demo/runtime
 ```
 
 Today, we don't support building the managed components of the runtime on Linux yet, so you'll need to have a Windows machine with clones of both the CoreCLR and CoreFX projects.
