@@ -51,7 +51,7 @@ D:\git\corefx> build.cmd /p:OS=Unix /p:SkipTests=true
 
 It's also possible to add ```/t:rebuild``` to the build.cmd to force it to delete the previously built assemblies.
 
-For the purposes of Hello World, we need to copy over both ```bin\Unix.AnyCPU.Debug\System.Console\System.Console.dll``` and ```bin\Unix.AnyCPU.Debug\System.Console\System.Diagnostics.Debug.dll```  into the runtime folder on Linux. (e.g ```~/coreclr-demo/runtime```).
+For the purposes of Hello World, we need to copy over both ```bin\Unix.AnyCPU.Debug\System.Console\System.Console.dll``` and ```bin\Unix.AnyCPU.Debug\System.Diagnostics.Debug\System.Diagnostics.Debug.dll```  into the runtime folder on Linux. (e.g ```~/coreclr-demo/runtime```).
 
 After you've done these steps, the runtime directory on Linux should look like this:
 
