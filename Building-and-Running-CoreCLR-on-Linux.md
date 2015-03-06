@@ -1,6 +1,4 @@
-This guide will walk you through building CoreCLR on Linux and running Hello World.  We'll start by showing how to set up your environment from scratch.  If you're in a hurry and want to use Docker, we have some sample images at the end of this document
-
-# From Scratch
+This guide will walk you through building CoreCLR on Linux and running Hello World.  We'll start by showing how to set up your environment from scratch.
 
 Before starting, you need to set up your development machine.  We use Ubuntu 14.04 LTS as our primary environment currently, so these instructions are written assuming you are using that Distro.  Pull Requests are welcome to address other environments as long as they don't break the ability to use Ubuntu 14.04 LTS.
 
@@ -85,24 +83,25 @@ Make a ```packages.config``` file with the following text:
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <packages>
-  <package id="System.Console" version="4.0.0-beta-22512" />
-  <package id="System.Diagnostics.Contracts" version="4.0.0-beta-22512" />
-  <package id="System.Diagnostics.Debug" version="4.0.10-beta-22512" />
-  <package id="System.Diagnostics.Tools" version="4.0.0-beta-22512" />
-  <package id="System.Globalization" version="4.0.10-beta-22512" />
-  <package id="System.IO" version="4.0.10-beta-22512" />
-  <package id="System.IO.FileSystem.Primitives" version="4.0.0-beta-22512" />
-  <package id="System.Reflection" version="4.0.10-beta-22512" />
-  <package id="System.Resources.ResourceManager" version="4.0.0-beta-22512" />
-  <package id="System.Runtime" version="4.0.20-beta-22512" />
-  <package id="System.Runtime.Extensions" version="4.0.10-beta-22512" />
-  <package id="System.Runtime.Handles" version="4.0.0-beta-22512" />
-  <package id="System.Runtime.InteropServices" version="4.0.20-beta-22512" />
-  <package id="System.Text.Encoding" version="4.0.10-beta-22512" />
-  <package id="System.Text.Encoding.Extensions" version="4.0.10-beta-22512" />
-  <package id="System.Threading" version="4.0.0-beta-22512" />
-  <package id="System.Threading.Tasks" version="4.0.10-beta-22512" />
+  <package id="System.Console" version="4.0.0-beta-22703" />
+  <package id="System.Diagnostics.Contracts" version="4.0.0-beta-22703" />
+  <package id="System.Diagnostics.Debug" version="4.0.10-beta-22703" />
+  <package id="System.Diagnostics.Tools" version="4.0.0-beta-22703" />
+  <package id="System.Globalization" version="4.0.10-beta-22703" />
+  <package id="System.IO" version="4.0.10-beta-22703" />
+  <package id="System.IO.FileSystem.Primitives" version="4.0.0-beta-22703" />
+  <package id="System.Reflection" version="4.0.10-beta-22703" />
+  <package id="System.Resources.ResourceManager" version="4.0.0-beta-22703" />
+  <package id="System.Runtime" version="4.0.20-beta-22703" />
+  <package id="System.Runtime.Extensions" version="4.0.10-beta-22703" />
+  <package id="System.Runtime.Handles" version="4.0.0-beta-22703" />
+  <package id="System.Runtime.InteropServices" version="4.0.20-beta-22703" />
+  <package id="System.Text.Encoding" version="4.0.10-beta-22703" />
+  <package id="System.Text.Encoding.Extensions" version="4.0.10-beta-22703" />
+  <package id="System.Threading" version="4.0.10-beta-22703" />
+  <package id="System.Threading.Tasks" version="4.0.10-beta-22703" />
 </packages>
+
 ```
 
 Then grab NuGet (if you don't have it already)
@@ -143,10 +142,3 @@ ellismg@linux:~/coreclr-demo/runtime$ ./corerun HelloWorld.exe linux
 ```
 
 Over time, we want this process to get easier. We would like to remove the dependency on having to compile managed code on Windows. For example, we are working to get our NuGet packages to include both the Windows and Linux versions of an assembly, so you can simply nuget restore the dependencies. Pull Requests to allow building CoreFX and mscorlib on Linux via Mono would be very welcome. A sample that builds Hello World on Linux using the correct references but via XBuild or MonoDevelop would also be great! Some of our processes (e.g. the mscorlib build) rely on Windows specific tools, but we want to figure out how to solve these problems for Linux as well. There's still a lot of work ahead, so if you're interested in helping, we're ready for you!
-
-# Using Docker
-
-If you don't want to do the above, or you can't (since you don't have access to Windows in order to build the managed components), I've produced a few helpful docker images to play around with.  There are not any plans to update these long term, but they should be useful in order to try things out.
-
-* ```ellismg/coreclr-demo:runtime-only``` Contains the runtime and managed components plus hello world.  Everything is located at ```/root/coreclr-demo```
-* ```ellismg/coreclr-demo:dev-environment``` Contains the managed components as well as the development tools for building the native runtime plus mono for building managed code locally.  Note this doesn't include the reference assemblies and other files in the packages directory since they can be downloaded on Linux using NuGet on mono, however a sample packages.config is present in ```/root/coreclr-demo/packages```.  In order to get this to work, you'll need to clone the git repository and build CoreCLR yourself and place the output in ```/root/coreclr-demo/runtime```.  You'll also need to go through the NuGet restore steps above, and build HelloWorld.exe yourself, but you don't need access to a Windows machine as the docker image already contains mscorlib.dll and System.Console.dll.
