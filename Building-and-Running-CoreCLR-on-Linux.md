@@ -132,7 +132,7 @@ ellismg@linux:~/coreclr-demo/runtime$ curl -O https://raw.githubusercontent.com/
 Then we just need to build it, with ```mcs```.  Because we need to compile it against the .NET Core surface area, we have to pass references to the contract assemblies we restored using NuGet:
 
 ```
-ellismg@linux:~/coreclr-demo/runtime$ mcs /nostdlib /noconfig /r:../packages/System.Console.4.0.0-beta-22512/lib/contract/System.Console.dll /r:../packages/System.Runtime.4.0.20-beta-22512/lib/contract/System.Runtime.dll HelloWorld.cs
+ellismg@linux:~/coreclr-demo/runtime$ mcs /nostdlib /noconfig /r:../packages/System.Console.4.0.0-beta-22703/lib/contract/System.Console.dll /r:../packages/System.Runtime.4.0.20-beta-22703/lib/contract/System.Runtime.dll HelloWorld.cs
 ```
 
 Once that's complete, we're ready to run Hello World!  To do that, we run corerun passing the path to the managed exe we want to run plus any arguments.  The HelloWorld from corefxlab will print Tux if we pass "linux" as an argument, so:
