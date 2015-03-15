@@ -5,7 +5,7 @@
  * [[Garbage Collector Contributions]]
  * [[Performance]]
  * [[Testing across repos]]
-* [[Instructions]]
+* Build and Run Instructions
  * [[Windows Instructions]]
  * [[Linux Instructions]]
  * [[Mac OS X Instructions]]
