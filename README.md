@@ -9,8 +9,8 @@ Here's the recommended way to participate.
 
 - Fork https://github.com/dotnet/coreclr-wiki.
 - Clone that forked repo locally. Your fork will (naturally) be origin.
-- Add coreclr-wiki as a remote, called 'scratch'.
-	- `git remote add scratch https://github.com/dotnet/coreclr-wiki'
+- Add coreclr-wiki as a remote, called 'prstream'.
+	- `git remote add prstream https://github.com/dotnet/coreclr-wiki'
 - Add coreclr.wiki, the real wiki, as a remote called 'upstream'.
 	- `git remote add upstream https://github.com/dotnet/coreclr.wiki`
 
