@@ -29,5 +29,5 @@ Contribution Overview
 
 Please read the [Contribution Guidelines](https://github.com/dotnet/coreclr/wiki/Contribution-guidelines) and [Contribution Workflow](https://github.com/dotnet/coreclr/wiki/Contribution-workflow) before making your first contribution.
 
-The CoreCLR codebase is a very important asset for Microsoft. CoreCLR is used by several Microsoft products (e.g. Windows Phone, ASP.NET 5, to name a few) to enable execution of managed code. It is also built from the same code as the .NET Framework CLR, such that a change to CoreCLR often becomes part of the .NET Framework CLR, too. Contributions to this repo can be tremendously valuable and positively impact millions of Microsoft customers. They can also inadvertly break apps. Contributions will be reviewed very closely to ensure that they are safe.
+CoreCLR is used by several Microsoft products (e.g. Windows Phone, ASP.NET 5) to enable execution of managed code. It is also from the same codebase as the .NET Framework CLR, such that a change to CoreCLR can become part of the .NET Framework CLR. Contributions to this repo can be tremendously valuable and positively impact many Microsoft customers. They can also inadvertly break apps. Contributions will be reviewed very closely to ensure that they are safe.
 
