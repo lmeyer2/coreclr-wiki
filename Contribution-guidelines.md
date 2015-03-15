@@ -1,11 +1,10 @@
 [CoreFx]: http://http://github.com/dotnet/corefx
 [CoreCLR]: http://http://github.com/dotnet/coreclr
 #Priorities
-The current priority for the team is open sourcing [.NET Core](http://blogs.msdn.com/b/dotnet/archive/2014/12/04/introducing-net-core.aspx).
 
-Because of this and the available bandwidth of our team we are going to have to balance the incoming PRs and issues with our current priority. 
+The current priority for the team is making [.NET Core](http://blogs.msdn.com/b/dotnet/archive/2014/12/04/introducing-net-core.aspx) work on Linux and Mac OS X.
 
-What this means is that we are putting in place a lightweight process for handling incoming PRs and issues to make sure the right set of people are working on the right set of PRs.
+Issues and PRs that align with our priority will get attention much quicker than those that do not. That said, we encourage a broad range of issues. There are lots of folks that may respond, particularly if there are others that are interested in the same topic.
 
 #Bug bar
 In order for a change to be accepted it needs to have a **demonstrably broad impact** of a **mainline scenario** and be **low risk**.  The change must also meet these [performance requirements](https://github.com/dotnet/coreclr/wiki/Performance).
@@ -23,7 +22,7 @@ While the definitions for mainline scenario and risk can be subjective, the area
 
 What that means is that some of the APIs that have ‘traditionally’ existed inside mscorlib (ie. System.Console) are now moving to their own separate assemblies.
 
-Because of backward compatibility (ie. Phone, full .NET Framework) where the APIs were present in mscorlib, those APIs can’t be removed from mscorlib. This leads to situations where the same (or very similar) code exists in both the [CoreCLR][CoreCLR] repository (as part of mscorlib) and in the [CoreFX][CoreFx] (as part of the new factored assembly).
+Because of backward compatibility (ie. Windows Phone, .NET Framework) where the APIs were present in mscorlib, those APIs can’t be removed from mscorlib. This leads to situations where the same (or very similar) code exists in both the [CoreCLR][CoreCLR] repository (as part of mscorlib) and in the [CoreFX][CoreFx] (as part of the new factored assembly).
 
 The rule of thumb is: **Start with the [CoreFX][CoreFx] repository for any managed API changes and the [CoreCLR][CoreCLR] repository for any runtime changes unless otherwise directed by the area owner.** 
 
