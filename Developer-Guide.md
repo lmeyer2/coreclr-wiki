@@ -20,7 +20,7 @@ The CoreCLR repo can be built from a regular, non-admin command prompt. The buil
 
 - X64
 
-[Instructions](https://github.com/dotnet/coreclr/wiki/MacOSX-Instructions)
+[OS X Instructions](https://github.com/dotnet/coreclr/wiki/Mac-OS-X-instructions)
 
 The CoreCLR build and test suite is a work in progress. Microsoft and the community are improving Linux and Mac OS X support on a daily basis are and adding more tests for all platforms. See [CoreCLR Issues](https://github.com/dotnet/coreclr/issues) to find out about specific work items or report issues.
 
