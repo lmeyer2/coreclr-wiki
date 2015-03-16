@@ -3,7 +3,7 @@ Project Priorities
 
 The current priority for the team is making [.NET Core](http://blogs.msdn.com/b/dotnet/archive/2014/12/04/introducing-net-core.aspx) work on Linux and Mac OS X. 
 
-For proposed product changes, the team has a strong bias to **demonstrable impact** of a **mainline scenario** and are **low-ish risk** to implement. The team is most likely to engage on issues and resultant PRs that meet this characteristic
+For proposed product changes, the team has a strong bias to **demonstrable impact** and are relatively **low risk** to implement. The team is most likely to engage on issues and resultant PRs that meet this characteristic
 
 However, we encourage creating a broad range of issues. There are lots of folks that may respond, particularly if there are others that are interested in the same topic. If a strong community viewpoint establishes itself on an issue outside of the core priority, then the team should engage on the issue.
 
@@ -51,7 +51,9 @@ There is currently minimal test coverage for Linux and Mac OS X builds that can 
 PR Review
 =========
 
-Team and community members will provide feedback on your change. Community feedback is highly valued. You will often see the absense of team feedback if the community has already provided good review feedback. Once feedback has been resolved and at least 2 .NET team members have signed-off, the PR will be merged. In the case of smaller changes, a team member may merge a PR without any additional feedback.
+Team and community members will provide feedback on your change. Community feedback is highly valued. You will often see the absense of team feedback if the community has already provided good review feedback. 
+
+Based on the size and impact of the change, and your history with the CoreCLR community, 1-2 core members will review every PR prior to merge.
 
 You may be asked to meet the published requirements for [performance](https://github.com/dotnet/coreclr/wiki/Performance) and [GC contributions](https://github.com/dotnet/coreclr/wiki/Garbage-Collector-Contributions).
 
