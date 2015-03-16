@@ -1,14 +1,14 @@
-# Windows Build Instructions
+Prerequisites
+=============
 
-## Prerequisites ##
-
-1. Visual Studio must be installed. Supported versions:
+- Visual Studio must be installed. Supported versions:
     - [Visual Studio Community 2013](http://go.microsoft.com/fwlink/?LinkId=517284) - **Free** for Open Source development!
     - [Visual Studio 2013](http://www.visualstudio.com/downloads/download-visual-studio-vs) (Pro, Premium, Ultimate)
-    - Visual Studio Express isn't supported for building CoreCLR
-2. Install [Cmake](http://www.cmake.org/download/ "CMake") 3.0.2 for Windows and make sure it is present in PATH environment variable for the system.
-3. Powershell should be installed.
-4. Tools required to work with Git are installed (e.g. [Git for Windows](http://msysgit.github.io/), [GitHub for Windows](https://windows.github.com/))
+    - Visual Studio Express isn't supported.
+    - Visual Studio 2015 is not yet support.
+- Install [Cmake](http://www.cmake.org/download/ "CMake") 3.0.2 for Windows and make sure it is present in PATH environment variable for the system.
+- Powershell should be installed.
+- Tools required to work with Git are installed (e.g. [Git for Windows](http://msysgit.github.io/), [GitHub for Windows](https://windows.github.com/))
 
 **Known Issues**
 
@@ -18,10 +18,12 @@ If you installed VS 2013 after VS 2012, then DIA SDK gets incorrectly installed 
 
 The repository is configured to allow Git to make the right decision about handling CRLF. Specifically, if you are working on **Windows**, please ensure that **core.autocrlf** is set to **true**. On **non-Windows** platforms, please set it to **input**.
 
-**Building the repository**
+Building the repository
+=======================
 
-1. Fork the CoreCLR Repo
-2. Clone the forked repo on your development machine
+1. Clone CoreCLR.
+    - `git clone https://github.com/dotnet/coreclr`
+    - Alternatitely, clone a fork. This is the best approach if you plan to contribute to the repo.
 3. Open a new command prompt and navigate to the root of the cloned repo.
 4. Invoke "build.cmd clean"
 
