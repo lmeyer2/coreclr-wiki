@@ -3,7 +3,6 @@
  * [[Contributing]]
  * [[Garbage Collector Contributions]]
  * [[Performance Requirements]]
- * [[Testing across repos]]
 * Build and Run Instructions
  * [[Windows Instructions]]
  * [[Linux Instructions]]
