@@ -1,7 +1,10 @@
-## Welcome to the CoreCLR Wiki!
+**Welcome to the CoreCLR Wiki!**
 
-* [Developer Guide](https://github.com/dotnet/coreclr/wiki/Developer-Guide)
-* [Contribution Guidelines](https://github.com/dotnet/coreclr/wiki/Contribution-Overview)
-* [Performance](https://github.com/dotnet/coreclr/wiki/Performance)
+This is the developer wiki for .NET Core Runtime repository. It covers the following topics:
 
+- How to build the repository.
+- How to use the runtime on Windows, Linux and Mac OS X.
+- Project priorities.
+- How we'd like contributions to be made.
 
+You can browse the wiki by selecting topics from the sidebar on the right.

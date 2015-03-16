@@ -1,9 +1,8 @@
 * [[Home]]
 * [[Developer Guide]]
- * [[Contribution Guidelines]]
- * [[Contribution Workflow]]
+ * [[Contributing]]
  * [[Garbage Collector Contributions]]
- * [[Performance]]
+ * [[Performance Requirements]]
  * [[Testing across repos]]
 * Build and Run Instructions
  * [[Windows Instructions]]
