@@ -3,6 +3,7 @@
  * [[Contributing]]
  * [[Garbage Collector Contributions]]
  * [[Performance Requirements]]
+ * [[Validating Changes]]
 * Build and Run Instructions
  * [[Windows Instructions]]
  * [[Linux Instructions]]
