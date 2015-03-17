@@ -1,4 +1,4 @@
-These instructions will lead you through building CoreCLR and running "Hello World".
+These instructions will lead you through building CoreCLR and running "Hello World" on OS X.
 
 Dependencies
 ============
@@ -17,8 +17,19 @@ Build CoreCLR
 2. Build CoreCLR, from the root of the coreclr repo.
     - `./build.sh`
     - Type `./build.sh -?` to see the build options.
+
+    ```
+    Repo successfully built.
+	Product binaries are available at /Users/richlander/Source/coreclr/binaries/Product/mac.x64.debug
+	```
+
 3. Check the build output.
     - `ls binaries/Product/mac.x64.debug/`
+
+    ```
+    corerun			libcoreclr.dylib	libmscordaccore.dylib
+	inc				libdebug-pal.a		libsos.dylib
+	```
 
 Build mscorlib
 ==============
@@ -60,17 +71,12 @@ Compile Hello World
 	        Console.WriteLine("Love from CoreCLR.");
 	    }   
 	} 
-```
+	```
 
-2. Compile your program, using on the following options.
-    - Compile on Windows in Visual Studio, as a Console app.
-    - Compile on Windows at the command-line with the C# compiler.
-        - Open up the Developer Command Prompt for VS2013.
-        - `csc helloworld.cs` where helloworld.cs is the path to the file you created and saved.
-    - Compile on OS X with the Mono C# compiler.
-        - Install Mono from the [Mono downloads](http://www.mono-project.com/download/).
-        - `dmcs -nostdlib -r:mscorlib.dll helloworld.cs`
-        - Note that the [Roslyn compiler](https://github.com/dotnet/roslyn) will soon be available on Mac OS X.
+2. Compile on OS X with the Mono C# compiler.
+    - Install Mono from the [Mono downloads](http://www.mono-project.com/download/).
+    - `dmcs -nostdlib -r:mscorlib.dll helloworld.cs`
+    - Note that the [Roslyn compiler](https://github.com/dotnet/roslyn) will soon be available on Mac OS X.
 
 3. Check the build output.
     - You should find a helloworld.exe in the appropriate location, given the compilation option you chose.
@@ -85,9 +91,13 @@ CoreCLR use a runner to run programs, unlike the way .NET programs run on Window
 2. Run the CoreCLR runner - corerun - to see options.
     - `./corerun`
 3. Start program.
-    - `./corerun -c . HelloWorld.exe`
+    - `./corerun -c . helloworld.exe`
 
+    ```
+    Hello, OS X
+	Love from CoreCLR.
+	```
 
-
+Credit to Frank A. Krueger for providing the first published Mac OS X instructions @ [Building and Running .NET’s CoreCLR on OS X](http://praeclarum.org/post/110552954728/building-and-running-nets-coreclr-on-os-x).
 
 
