@@ -99,5 +99,3 @@ CoreCLR use a runner to run programs, unlike the way .NET programs run on Window
 	```
 
 Credit to Frank A. Krueger for providing the first published Mac OS X instructions @ [Building and Running .NET’s CoreCLR on OS X](http://praeclarum.org/post/110552954728/building-and-running-nets-coreclr-on-os-x).
-
-
