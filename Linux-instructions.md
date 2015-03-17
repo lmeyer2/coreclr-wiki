@@ -4,11 +4,19 @@ Before starting, you need to set up your development machine.  We use Ubuntu 14.
 
 There have been reports of issues when using other distros or versions of Ubuntu (e.g. [Issue 95](https://github.com/dotnet/coreclr/issues/95)) so if you're on another distribution, consider using docker's ```ubuntu:14.04``` image.
 
-We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5  lldb-3.5-dev libunwind8 libunwind8-dev```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
+We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev lldb-3.6 and lldb-3.6-dev libunwind8 libunwind8-dev```.  On Ubuntu 14.04 they can be installed with ```apt-get```:
+
+```sudo echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" > /etc/apt/sources.list.d/llvm.list```
+
+```sudo wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -```
+
+```sudo apt-get update```
+
+```sudo apt-get install lldb-3.6 lldb-3.6-dev```
 
 ```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev libunwind8 libunwind8-dev```  
 
-This gives us the 3.5 version of the llvm toolchain and version 2.8.12.2 of cmake.
+This gives us the 3.5 version of the llvm toolchain, lldb 3.6, and version 2.8.12.2 of cmake.
 
 This guide assumes that you've cloned the coreclr repository into ```~/git/coreclr``` on your Linux machine and the corefx and coreclr repositories into ```D:\git\corefx``` and ```D:\git\coreclr``` on Windows. If your setup is different, you'll need to pay careful attention to the commands you run. In this guide, I'll always show what directory I'm in on both the Linux and Windows machine.
 
