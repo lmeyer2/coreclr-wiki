@@ -12,9 +12,7 @@ We install the following packages to get our toolchain: ```cmake llvm-3.5 clang-
 
 ```sudo apt-get update```
 
-```sudo apt-get install lldb-3.6 lldb-3.6-dev```
-
-```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev libunwind8 libunwind8-dev```  
+```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev```  
 
 This gives us the 3.5 version of the llvm toolchain, lldb 3.6, and version 2.8.12.2 of cmake.
 
