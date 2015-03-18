@@ -21,7 +21,7 @@ Install the following packages for the toolchain:
 
 On Ubuntu 14.04, you can install them with the following ```apt-get``` command:
 
-```sudo echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" > /etc/apt/sources.list.d/llvm.list```
+```echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | sudo tee /etc/apt/sources.list.d/llvm.list```
 
 ```sudo wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -```
 
