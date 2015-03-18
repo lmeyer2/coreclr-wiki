@@ -21,7 +21,13 @@ Install the following packages for the toolchain:
 
 On Ubuntu 14.04, you can install them with the following ```apt-get``` command:
 
-```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev libunwind8 libunwind8-dev```  
+```sudo echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" > /etc/apt/sources.list.d/llvm.list```
+
+```sudo wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -```
+
+```sudo apt-get update```
+
+```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev```  
 
 You now have version 3.5 of the llvm toolchain and version 2.8.12.2 of cmake.
 
