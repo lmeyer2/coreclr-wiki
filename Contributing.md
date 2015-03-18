@@ -6,14 +6,14 @@ The current priority for the team is making [.NET Core](http://blogs.msdn.com/b/
 Contribution Guidelines
 =======================
 
-Please always start your contribution with a PR, per [.NET Core Contributions](https://github.com/dotnet/corefx/wiki/Contributing). The recommended contribution workflow is described in those guidelines.
+Please always start your contribution with an Issue, per [.NET Core Contributions](https://github.com/dotnet/corefx/wiki/Contributing). The recommended contribution workflow is described in those guidelines.
 
 The team will prefer incoming PRs and issues that align with the project priority (see above). 
 
 However, it is OK to create a broad range of issues. There may be other developers that are interested in the same topic. If a strong community viewpoint establishes itself on an issue outside of the core priority, then the team will likely engage on the issue.
 
-Contributing to CoreCLR
-------------------------
+Contributing to CoreCLR Repo
+----------------------------
 
 Changes must have a **demonstrably broad impact** of a **mainline scenario** and be **low risk** in order to be accepted. They must also satisfy the published guidelines for .NET Core.
 
@@ -23,8 +23,10 @@ The .NET Core guidelines can sometimes be subjective. A .NET Core member will be
 - [Garbage Collection Contributions](https://github.com/dotnet/coreclr/wiki/Garbage-Collector-Contributions) for changes that affect the GC.
 - [Performance Requirements](https://github.com/dotnet/coreclr/wiki/Performance-Requirements) for changes in performance critical code or that otherwise affect performance.
 
-Contributing to mscorlib
-------------------------
+The CoreCLR codebase is used by several Microsoft products (e.g. Windows Phone, ASP.NET 5, .NET Framework 4.6) to enable execution of managed code. Changes to the open source codebase can become part of these products, but are first reviewed and tested to ensure they are correct for those products and will not inadvertently break applications.
+
+Contributing to mscorlib library
+--------------------------------
 
 We do not plan on accepting new features in mscorlib within the CoreCLR repo. Even bug fixes will be closely reviewed. The backwards compatibility burden we have to maintain for is quite high. CoreCLR shares a codebase with .NET Framework and is used in multiple Microsoft products.
 
