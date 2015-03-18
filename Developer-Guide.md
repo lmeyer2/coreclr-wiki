@@ -28,7 +28,7 @@ Support for x86 and ARM32 will come over time. The priority is to bring up x64.
 Contributing
 ============
 
-Please read [Contributing](https://github.com/dotnet/coreclr/wiki/Contribution) to .NET Core before making your first contribution.
+Please read [Contributing](https://github.com/dotnet/coreclr/wiki/Contributing) to .NET Core before making your first contribution.
 
 Understanding the TFS-Git Mirror
 ================================
