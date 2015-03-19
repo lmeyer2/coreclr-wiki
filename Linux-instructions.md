@@ -20,7 +20,7 @@ Install the following packages for the toolchain:
 - libunwind8 
 - libunwind8-dev  
 
-In order to get lldb-3.7 on Ubuntu 14.04, we need to add an additional package soure:
+In order to get lldb-3.6 on Ubuntu 14.04, we need to add an additional package source:
 
 ```
 ellismg@linux:~$ echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | sudo tee /etc/apt/sources.list.d/llvm.list
