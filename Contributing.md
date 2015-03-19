@@ -17,6 +17,13 @@ Contribution "Bar"
 
 Changes must have a **demonstrably broad impact** of a **mainline scenario** and be **low risk** in order to be accepted. They must also satisfy the published guidelines for .NET Core.
 
+Contributing Ports
+------------------
+
+We encourage ports of CoreCLR to other platforms. Linux and Mac OS X ports are in progress and have a lot of momentum behind them. There is also interest in a [FreeBSD port](https://github.com/dotnet/coreclr/issues/455) (and OpenBSD and NetBSD).
+
+Ports have a weaker contribution bar, since they do not contribute to compatibility risk with existing Microsoft products on Windows. For ports, we are primarily looking for functionaly correct implementations.
+
 Contributing to CoreCLR Repo
 ----------------------------
 
