@@ -14,22 +14,25 @@ Install the following packages for the toolchain:
 
 - cmake 
 - llvm-3.5 
-- clang-3.5 lldb-3.5  
-- lldb-3.5-dev 
+- clang-3.5 
+- lldb-3.6  
+- lldb-3.6-dev 
 - libunwind8 
 - libunwind8-dev  
 
-On Ubuntu 14.04, you can install them with the following ```apt-get``` command:
+In order to get lldb-3.7 on Ubuntu 14.04, we need to add an additional package soure:
 
-```echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | sudo tee /etc/apt/sources.list.d/llvm.list```
+```
+ellismg@linux:~$ echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.6 main" | sudo tee /etc/apt/sources.list.d/llvm.list
+ellismg@linux:~$ wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+ellismg@linux:~$ sudo apt-get update
+```
 
-```sudo wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -```
+Then install the packages you need:
 
-```sudo apt-get update```
+```ellismg@linux:~$ sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev```  
 
-```sudo apt-get install cmake llvm-3.5 clang-3.5 lldb-3.5 lldb-3.5-dev lldb-3.6 lldb-3.6-dev libunwind8 libunwind8-dev```  
-
-You now have version 3.5 of the llvm toolchain and version 2.8.12.2 of cmake.
+You now have all the required components.
 
 Git Setup
 ---------
