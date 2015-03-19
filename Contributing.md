@@ -12,12 +12,15 @@ The team will prefer incoming PRs and issues that align with the project priorit
 
 However, it is OK to create a broad range of issues. There may be other developers that are interested in the same topic. If a strong community viewpoint establishes itself on an issue outside of the core priority, then the team will likely engage on the issue.
 
-Contributing to CoreCLR Repo
-----------------------------
+Contribution "Bar"
+------------------
 
 Changes must have a **demonstrably broad impact** of a **mainline scenario** and be **low risk** in order to be accepted. They must also satisfy the published guidelines for .NET Core.
 
-The .NET Core guidelines can sometimes be subjective. A .NET Core member will be happy to explain why a guideline is defined as it is. We can also update the wiki, as needed.
+Contributing to CoreCLR Repo
+----------------------------
+
+The .NET Core team maintains several guidelines for contributing to the .NET Core repos, which are provided below. Many of these are straightforward, while others may seem  subjective. A .NET Core member will be happy to explain why a guideline is defined as it is. We can also update the wiki, as needed.
 
 - [.NET Core Contributions](https://github.com/dotnet/corefx/wiki/Contributing) for general .NET Contribution guidelines.
 - [Garbage Collection Contributions](https://github.com/dotnet/coreclr/wiki/Garbage-Collector-Contributions) for changes that affect the GC.
