@@ -27,11 +27,12 @@ Ports have a weaker contribution bar, since they do not contribute to compatibil
 Contributing to CoreCLR Repo
 ----------------------------
 
-The .NET Core team maintains several guidelines for contributing to the .NET Core repos, which are provided below. Many of these are straightforward, while others may seem  subjective. A .NET Core member will be happy to explain why a guideline is defined as it is. We can also update the wiki, as needed.
+The .NET Core team maintains several guidelines for contributing to the .NET Core repos, which are provided below. Many of these are straightforward, while others may seem  subjective. A .NET Core team member will be happy to explain why a guideline is defined as it is. We can also update the wiki, as needed.
 
 - [.NET Core Contributions](https://github.com/dotnet/corefx/wiki/Contributing) for general .NET Contribution guidelines.
 - [Garbage Collection Contributions](https://github.com/dotnet/coreclr/wiki/Garbage-Collector-Contributions) for changes that affect the GC.
 - [Performance Requirements](https://github.com/dotnet/coreclr/wiki/Performance-Requirements) for changes in performance critical code or that otherwise affect performance.
+- [Mscorlib Contributions](https://github.com/dotnet/coreclr/wiki/Contributing#contributing-to-mscorlib-library) for contributing to the mscorlib library
 
 The CoreCLR codebase is used by several Microsoft products (e.g. Windows Phone, ASP.NET 5, .NET Framework 4.6) to enable execution of managed code. Changes to the open source codebase can become part of these products, but are first reviewed and tested to ensure they are correct for those products and will not inadvertently break applications.
 
