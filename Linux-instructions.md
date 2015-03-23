@@ -77,7 +77,7 @@ The output is placed in ```binaries\intermediates\Unix.x64.Debug\mscorlib.dll```
 For the rest of the framework, you need to pass some special parameters to build.cmd when building out of the CoreFX repository.
 
 ```
-D:\git\corefx> build.cmd /p:OS=Unix /p:SkipTests=true
+D:\git\corefx> build.cmd /p:OS=Linux /p:SkipTests=true
 ```
 
 It's also possible to add ```/t:rebuild``` to the build.cmd to force it to delete the previously built assemblies.
