@@ -19,6 +19,7 @@ Install the following packages for the toolchain:
 - lldb-3.6-dev 
 - libunwind8 
 - libunwind8-dev  
+- gettext
 
 In order to get lldb-3.6 on Ubuntu 14.04, we need to add an additional package source:
 
