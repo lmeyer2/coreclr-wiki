@@ -7,4 +7,4 @@
 * Build and Run Instructions
  * [[Windows Instructions]]
  * [[Linux Instructions]]
- * [[Mac OS X Instructions]]
+ * [[OS X Instructions]]
