@@ -128,7 +128,7 @@ ellismg@linux:~$ mkdir ~/coreclr-demo/packages
 ellismg@linux:~$ cd ~/coreclr-demo/packages
 ```
 
-Make a ```packages.config``` file with the following text. These are the required dependencies of this particular app. Different apps will have different dependencies and require a different package.config - see [Issue #480](https://github.com/dotnet/coreclr/issues/480).
+Make a ```packages.config``` file with the following text. These are the required dependencies of this particular app. Different apps will have different dependencies and require a different ```packages.config``` - see [Issue #480](https://github.com/dotnet/coreclr/issues/480).
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
