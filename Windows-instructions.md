@@ -91,7 +91,7 @@ Copy these files into the demo directory.
 Build the Framework
 ===================
 
-Build the framework out of the corefx directory. You need to pass some special parameters to build.cmd.
+Build the framework out of the corefx directory.
 
 	c:\git\corefx>build.cmd
 
@@ -169,8 +169,6 @@ Then you just need to build it, with csc, the .NET Framework C# compiler. It may
 	C:\coreclr-demo>csc /nostdlib /noconfig /r:packages\System.Runtime.4.0.20-beta-2
 	2703\lib\contract\System.Runtime.dll /r:packages\System.Console.4.0.0-beta-22703
 	\lib\contract\System.Console.dll /out:runtime\HelloWorld.exe HelloWorld.cs
-
-FYI: The Roslyn C# compiler will soon be available. 
 
 Run the demo
 ============
