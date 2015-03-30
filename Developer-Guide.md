@@ -3,7 +3,7 @@ Intro to CoreCLR
 
 CoreCLR is a self-contained .NET runtime that implements [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/dotnet-standards.md). It is relatively straightforward to port to various architectures and/or platforms. It support a variety of installation options, having no specific deployment requirements itself.
 
-The [Book of the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/index.md) is a great source of information and insight to learn more about CoreCLR. 
+The [Book of the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/README.md#book-of-the-runtime) is a great source of information and insight to learn more about CoreCLR. 
 
 Building the repository
 =======================
@@ -19,7 +19,7 @@ The CoreCLR repo can be built from a regular, non-admin command prompt. The buil
 
 [Windows-instructions]: https://github.com/dotnet/coreclr/wiki/Windows-Instructions
 [Linux-instructions]: https://github.com/dotnet/coreclr/wiki/Linux-Instructions
-[OSX-instructions]: https://github.com/dotnet/coreclr/wiki/Mac-OS-X-instructions
+[OSX-instructions]: https://github.com/dotnet/coreclr/wiki/OS-X-instructions
 
 The CoreCLR build and test suite is a work in progress. The .NET Core team and the community are improving Linux and Mac OS X support on a daily basis are and adding more tests for all platforms. See [CoreCLR Issues](https://github.com/dotnet/coreclr/issues) to find out about specific work items or report issues.
 
