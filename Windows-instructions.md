@@ -164,11 +164,13 @@ Now you need a Hello World application to run. You can write your own, if you'd 
 
 Personally, I'm partial to the one on corefxlab which will print a picture for you. Download the [corefxlab demo](https://raw.githubusercontent.com/dotnet/corefxlab/master/demos/CoreClrConsoleApplications/HelloWorld/HelloWorld.cs) to `\coreclr-demo`.
 
-Then you just need to build it, with csc, the .NET Framework C# compiler. FYI: The Roslyn C# compiler will soon be available. Because you need to compile the app against the .NET Core surface area, you need to pass references to the contract assemblies you restored using NuGet:
+Then you just need to build it, with csc, the .NET Framework C# compiler. It may be easier to do this step within the "Developer Command Prompt for VS2013", if csc is not in your path. Because you need to compile the app against the .NET Core surface area, you need to pass references to the contract assemblies you restored using NuGet:
 
 	C:\coreclr-demo>csc /nostdlib /noconfig /r:packages\System.Runtime.4.0.20-beta-2
 	2703\lib\contract\System.Runtime.dll /r:packages\System.Console.4.0.0-beta-22703
 	\lib\contract\System.Console.dll /out:runtime\HelloWorld.exe HelloWorld.cs
+
+FYI: The Roslyn C# compiler will soon be available. 
 
 Run the demo
 ============
