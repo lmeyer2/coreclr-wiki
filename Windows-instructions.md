@@ -52,7 +52,7 @@ NuGet
 
 NuGet is required to acquire any .NET assembly dependency that is not built by these instructions.
 
-Download the [NuGet client](https://nuget.org/nuget.exe) and copy to c:\coreclr-demo. Validate that it is there.
+Download the [NuGet client](https://nuget.org/nuget.exe) and copy to c:\coreclr-demo. Alteratively, you can make download nuget.exe, put it somewhere else and make it part of your path.
 
 Build the Runtime
 =================
@@ -145,3 +145,41 @@ And restore the packages with the packages.config:
 
 	C:\coreclr-demo>nuget restore packages\packages.config -Source https://www.myget.org/F/dotnet-corefx/ -PackagesDirectory packages
 
+Compile the Demo
+================
+
+Now you need a Hello World application to run. You can write your own, if you'd like. Here's a very simple one:
+
+
+	using System;
+
+	public class Program
+	{
+	    public static void Main (string[] args)
+	    {
+	        Console.WriteLine("Hello, Windows");
+	        Console.WriteLine("Love from CoreCLR.");
+	    }   
+	} 
+
+Personally, I'm partial to the one on corefxlab which will print a picture for you. Download the [corefxlab demo](https://raw.githubusercontent.com/dotnet/corefxlab/master/demos/CoreClrConsoleApplications/HelloWorld/HelloWorld.cs) to `\coreclr-demo`.
+
+Then you just need to build it, with csc, the .NET Framework C# compiler. FYI: The Roslyn C# compiler will soon be available. Because you need to compile the app against the .NET Core surface area, you need to pass references to the contract assemblies you restored using NuGet:
+
+	C:\coreclr-demo>csc /nostdlib /noconfig /r:packages\System.Runtime.4.0.20-beta-2
+	2703\lib\contract\System.Runtime.dll /r:packages\System.Console.4.0.0-beta-22703
+	\lib\contract\System.Console.dll /out:runtime\HelloWorld.exe HelloWorld.cs
+
+Run the demo
+============
+
+You need to copy the NuGet package assemblies over to the runtime folder. 
+The easiest way to do this is with a little batch magic. Say "no" to any requests to overwrite files, to avoid overwriting the CoreFX files you just built.
+
+	for /f %k in ('dir /s /b packages\*.dll') do echo %k | findstr "\aspnetcore50" && copy /-Y %k runtime
+
+You're ready to run Hello World! To do that, run corerun, passing the path to the managed exe, plus any arguments. In this case, no arguments are necessary.
+
+	CoreRun.exe HelloWorld.exe
+
+Over time, this process will get easier. Thanks for trying out CoreCLR. Feel free to try a more interesting demo.
