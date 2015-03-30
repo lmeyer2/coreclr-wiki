@@ -1,6 +1,7 @@
-## Debugging ##
+These instructions will lead you through debugging CoreCLR on Windows. They will be expanded to support Linux and OS X when we have good instructions for that.
 
-**Debugging CoreCLR**
+Debugging CoreCLR
+=================
 
 1. Perform a build of the repo.
 2. Open <repo_root>\binaries\Cmake\CoreCLR.sln in VS.
@@ -17,7 +18,8 @@
 
 Steps 1-8 only need to be done once, and then (9) can be repeated whenever you want to start debugging. The above can be done with Visual Studio 2013.
 
-**Debugging Mscorlib and/or managed application**
+Debugging Mscorlib and/or managed application
+=============================================
 
 To step into and debug managed code of Mscorlib.dll (or the managed application being executed by the runtime you built), using Visual Studio, is something that will be supported with Visual Studio 2015. We are actively working to enable this support. 
 
