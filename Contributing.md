@@ -50,4 +50,4 @@ Most managed code changes should be made in the [CoreFX](https://github.com/dotn
 - The type exists in CoreCLR only -> choose CoreCLR.
 - In doubt -> choose CoreFX.
 
-Please see [Breaking Changing](https://github.com/dotnet/corefx/wiki/Breaking-Changes) to understand our requirements on changes that could impact compatibility. Please pay the most attention to changes that affect the [Public Contract](https://github.com/dotnet/corefx/wiki/Breaking-Changes#bucket-1-public-contract). We will not accept changes that break compatibility.
+Please see [Breaking Changes](https://github.com/dotnet/corefx/wiki/Breaking-Changes) to understand our requirements on changes that could impact compatibility. Please pay the most attention to changes that affect the [Public Contract](https://github.com/dotnet/corefx/wiki/Breaking-Changes#bucket-1-public-contract). We will not accept changes that break compatibility.
