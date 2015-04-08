@@ -83,7 +83,7 @@ Copy the runtime and corerun into the demo directory.
 Build the Framework
 ===================
 
-There isn't yet support for compiling managed code on OS X. The following instructions assume you are on a Windows machine with clones of both the CoreCLR and CoreFX repos and that has a correctly configured [environment](https://github.com/dotnet/coreclr/wiki/Windows-instructions#environment).
+There isn't yet support for compiling managed code on OS X. The following instructions assume you are on a Windows machine with clones of both the CoreCLR and CoreFX repos and that has a correctly configured [environment](windows-instructions.md#environment).
 
 You will need to copy binaries built on Windows to your Mac. Use whatever copying method works for you, such as a thumbdrive, a sync program or a cloud drive. To make this easy, copy files to a demo directory on Windows, so that you can copy all of the files to your Mac together.
 
