@@ -89,7 +89,7 @@ You will need to copy binaries built on Windows to your Mac. Use whatever copyin
 
     C:\git\coreclr>mkdir \coreclr-demo
 
-Build mscorlb
+Build mscorlib
 -------------
 
 Build mscorlib.dll out of the coreclr repository:
